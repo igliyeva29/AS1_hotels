@@ -24,7 +24,7 @@ class RoomFactory extends Factory
             'room_number' => fake()->unique()->numberBetween(100,500),
             'type' => fake()->randomElement($objs = ['single', 'double', 'suit']),
             'per_night_price' => fake()->numberBetween(500, 2000),
-            'is_available' => fake()->boolean(50),
+            'is_available' => fake()->boolean(30),
             'created_at' => now(),
             'updated_at' => now(),
         ];
