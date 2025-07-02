@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Room;
+use App\Models\Guest;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**

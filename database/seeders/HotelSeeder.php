@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Hotel;
+use App\Models\City;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -13,7 +14,7 @@ class HotelSeeder extends Seeder
      */
     public function run(): void
     {
-        $city = City::inRandomOrder()->first();
+        
 
         $objs = [
             'Yyldyz',
@@ -21,9 +22,16 @@ class HotelSeeder extends Seeder
             'Syyahat',
             'Turkmenistan',
             'Diwan',
+            'Ak Altyn',
+            'Hazar',
+            'Deniz',
+            'Merdana',
+            'Gami',
+           
         ];
 
         foreach($objs as $obj) {
+            $city = City::inRandomOrder()->first();
             Hotel::create([
                 'city_id' => $city->id,
                 'name' => $obj,

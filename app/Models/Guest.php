@@ -18,7 +18,7 @@ class Guest extends Model
     protected $fillable = [
         'room_id',
         'name',
-        'password_number',
+        'passport_number',
     ];
 
     public function city()

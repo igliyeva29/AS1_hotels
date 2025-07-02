@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Room;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -21,7 +22,7 @@ class GuestFactory extends Factory
         return [
             'room_id' => $room->id,
             'name' => fake()->name(),
-            'pasport_number' => fake()->unique()->cpf(false),
+            'passport_number' => fake()->unique()->ean8(),
             'created_at' => now(),
             'updated_at' => now(),
         ];

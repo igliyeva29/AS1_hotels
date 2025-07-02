@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('room_id')->constrained()->onDelete('cascade');
             $table->string('name');
-            $table->integer('password_number');
+            $table->integer('passport_number');
             $table->timestamps();
         });
     }
